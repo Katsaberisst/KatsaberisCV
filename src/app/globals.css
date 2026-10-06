@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-main: #fafafa;
+  --fg-main: #0f172a;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+.dark {
+  --bg-main: #090a0f;
+  --fg-main: #f8fafc;
+  --card-bg: #10131c;
+  --border-color: #1e2433;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--fg-main);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Minimalist scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 150, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 150, 0.45);
+}
+
+/* Code and mono styling */
+code, pre {
+  font-family: var(--font-geist-mono), monospace;
+}
