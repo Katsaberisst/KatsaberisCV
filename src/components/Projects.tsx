@@ -147,7 +147,7 @@ export default function Projects() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:opacity-90 transition-opacity whitespace-nowrap"
           >
             <GithubIcon className="w-3.5 h-3.5" />
-            Visit github.com/stelios-katsaberis
+            Visit github.com/Katsaberisst/
             <ExternalLink className="w-3 h-3" />
           </a>
         </div>
