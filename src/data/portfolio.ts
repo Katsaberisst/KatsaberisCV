@@ -57,8 +57,8 @@ export const PERSONAL_INFO = {
   ],
   contacts: {
     email: "katsaberisst@hotmail.com",
-    github: "https://github.com/stelios-katsaberis",
-    linkedin: "https://linkedin.com/in/stelios-katsaberis",
+    github: "https://github.com/katsaberisst",
+    linkedin: "https://www.linkedin.com/in/stelios-katsaberis-1b8913268/",
   },
   stats: [
     { label: "Years in Tech & Education", value: "10+" },

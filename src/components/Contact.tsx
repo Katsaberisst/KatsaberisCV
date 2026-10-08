@@ -1,6 +1,5 @@
 "use client";
 
-
 import React, { useState } from "react";
 import {
   Mail,
@@ -31,36 +30,35 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  
-  if (!formState.name || !formState.email || !formState.message) return;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  setIsSubmitting(true);
+    if (!formState.name || !formState.email || !formState.message) return;
 
-  try {
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formState),
-    });
+    setIsSubmitting(true);
 
-    if (response.ok) {
-      setIsSubmitted(true);
-      // Προστέθηκε και το subject: '' εδώ για να μην βγάζει σφάλμα TypeScript
-      setFormState({ name: '', email: '', subject: '', message: '' });
-    } else {
-      alert('Υπήρξε σφάλμα κατά την αποστολή του μηνύματος.');
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormState({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert("Υπήρξε σφάλμα κατά την αποστολή του μηνύματος.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Αποτυχία σύνδεσης με τον διακομιστή.");
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    console.error('Error sending message:', error);
-    alert('Αποτυχία σύνδεσης με τον διακομιστή.');
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
 
   const mailtoLink = `mailto:${PERSONAL_INFO.contacts.email}?subject=${encodeURIComponent(
     formState.subject || `Inquiry from ${formState.name || "Portfolio Visitor"}`
@@ -69,7 +67,10 @@ const handleSubmit = async (e: React.FormEvent) => {
   )}`;
 
   return (
-    <section id="contact" className="py-20 border-t border-neutral-200/80 dark:border-neutral-800/80 scroll-mt-20">
+    <section
+      id="contact"
+      className="py-20 border-t border-neutral-200/80 dark:border-neutral-800/80 scroll-mt-20"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
@@ -199,10 +200,10 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <h4 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
-                    Message Prepared!
+                    Message Sent Successfully!
                   </h4>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-sm mx-auto">
-                    Thank you, {formState.name}. You can also open your mail client to send this directly to Stelios.
+                    Thank you, {formState.name}. Your message has been sent directly to Stelios.
                   </p>
                   <div className="pt-3 flex flex-wrap justify-center gap-3">
                     <a
