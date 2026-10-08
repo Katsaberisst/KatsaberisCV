@@ -24,7 +24,6 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(PERSONAL_INFO.contacts.email);
@@ -37,7 +36,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   
   if (!formState.name || !formState.email || !formState.message) return;
 
-  setIsLoading(true);
+  setIsSubmitting(true);
 
   try {
     const response = await fetch('/api/contact', {
@@ -59,7 +58,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     console.error('Error sending message:', error);
     alert('Αποτυχία σύνδεσης με τον διακομιστή.');
   } finally {
-    setIsLoading(false);
+    setIsSubmitting(false);
   }
 };
 
@@ -70,7 +69,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   )}`;
 
   return (
-    <section id="contact" className="py-20 border-t border-neutral-200/80 dark:border-neutral-800/80">
+    <section id="contact" className="py-20 border-t border-neutral-200/80 dark:border-neutral-800/80 scroll-mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
