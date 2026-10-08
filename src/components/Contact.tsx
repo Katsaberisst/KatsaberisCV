@@ -1,5 +1,6 @@
 "use client";
 
+
 import React, { useState } from "react";
 import {
   Mail,
@@ -23,6 +24,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(PERSONAL_INFO.contacts.email);
@@ -30,16 +32,36 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formState.name || !formState.email || !formState.message) return;
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  if (!formState.name || !formState.email || !formState.message) return;
 
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+  setIsLoading(true);
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formState),
+    });
+
+    if (response.ok) {
       setIsSubmitted(true);
-    }, 600);
-  };
+      // Προστέθηκε και το subject: '' εδώ για να μην βγάζει σφάλμα TypeScript
+      setFormState({ name: '', email: '', subject: '', message: '' });
+    } else {
+      alert('Υπήρξε σφάλμα κατά την αποστολή του μηνύματος.');
+    }
+  } catch (error) {
+    console.error('Error sending message:', error);
+    alert('Αποτυχία σύνδεσης με τον διακομιστή.');
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   const mailtoLink = `mailto:${PERSONAL_INFO.contacts.email}?subject=${encodeURIComponent(
     formState.subject || `Inquiry from ${formState.name || "Portfolio Visitor"}`
