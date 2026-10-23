@@ -20,7 +20,7 @@ export default function About() {
             </h2>
           </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-md font-normal">
-            Bridging rigorous computer systems engineering, international economic strategy, and cutting-edge postgraduate AI research.
+            Bridging foundational computer science education from the University of Piraeus, international business strategy, and over a decade of practical teaching and web development.
           </p>
         </div>
 
@@ -34,14 +34,14 @@ export default function About() {
               </p>
             ))}
 
-            {/* Remote Work & AI Focus Box */}
+            {/* AI Tools & Workflow Box */}
             <div className="mt-6 p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-neutral-900/40 space-y-3">
               <div className="flex items-center gap-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100">
                 <Sparkles className="w-4 h-4 text-purple-500" />
-                Remote Readiness & Autonomous Execution
+                Modern AI-Assisted Workflows
               </div>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-normal">
-                Equipped for asynchronous team workflows, clear written documentation, and self-directed sprint execution. Accustomed to taking complex requirements from ideation to production-ready deployments.
+                Comfortable and productive with cutting-edge AI developer tools, including Codex and Anti-gravity (AGY). I leverage AI for rapid prototyping, intelligent debugging, and automated testing while maintaining rigorous architectural standards.
               </p>
             </div>
           </div>
@@ -54,11 +54,11 @@ export default function About() {
                   <Layers className="w-4 h-4" />
                 </span>
                 <span className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-                  Full-Stack Architecture
+                  Web Development
                 </span>
               </div>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 pl-9">
-                Modern Next.js (App Router), React ecosystem, custom PHP/MySQL backend services, and REST APIs.
+                React, Next.js, HTML5/CSS3, JavaScript, PHP, MySQL, WordPress, and WooCommerce.
               </p>
             </div>
 
@@ -68,11 +68,11 @@ export default function About() {
                   <Compass className="w-4 h-4" />
                 </span>
                 <span className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-                  AI & Data Integration
+                  AI Tools (Codex &amp; Anti-gravity)
                 </span>
               </div>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 pl-9">
-                Applying advanced digital technologies, intelligent data handling, and automated processing pipelines.
+                Leveraging Codex and Anti-gravity for high-velocity prototyping, code synthesis, and clean refactoring.
               </p>
             </div>
 
@@ -82,11 +82,11 @@ export default function About() {
                   <BookOpen className="w-4 h-4" />
                 </span>
                 <span className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-                  Pedagogy & Training
+                  Informatics &amp; IT Training
                 </span>
               </div>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 pl-9">
-                10+ years distilling complex CS concepts into clear mental models for students, educators, and cross-functional teams.
+                10+ years teaching algorithmic design, Panhellenic national exam preparation (ΑΕΠΠ), and primary education.
               </p>
             </div>
           </div>
@@ -96,12 +96,12 @@ export default function About() {
         <div className="mb-6">
           <h3 className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
             <GraduationCap className="w-5 h-5 text-neutral-500" />
-            Formal Education & Degrees
+            Formal Education &amp; Degrees
           </h3>
         </div>
 
         {/* Education Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {EDUCATION_LIST.map((edu, idx) => (
             <div
               key={idx}

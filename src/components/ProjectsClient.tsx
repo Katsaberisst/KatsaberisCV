@@ -63,6 +63,7 @@ export default function ProjectsClient({
   const caseStudyCategories = [
     { id: "all", label: "All Projects" },
     { id: "React / Full-Stack", label: "React & REST" },
+    { id: "Next.js & Vercel", label: "Next.js & Vercel" },
     { id: "Vanilla JS", label: "Pure JavaScript" },
     { id: "AngularJS", label: "AngularJS" },
     { id: "WordPress & PHP", label: "WordPress & PHP" },
@@ -320,10 +321,18 @@ export default function ProjectsClient({
                 >
                   <div>
                     {/* Top Meta */}
-                    <div className="flex items-center justify-between gap-3 mb-3">
-                      <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700">
-                        {project.category}
-                      </span>
+                    <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700">
+                          {project.category}
+                        </span>
+                        {project.deploymentNote && (
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                            {project.deploymentNote}
+                          </span>
+                        )}
+                      </div>
                       <a
                         href={project.githubUrl}
                         target="_blank"

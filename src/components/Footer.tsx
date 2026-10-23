@@ -81,7 +81,7 @@ export default function Footer() {
             Built with Next.js 16 (App Router), React 19 &amp; Tailwind CSS
           </div>
           <div>
-            Designed for 100% Remote Engineering &amp; EdTech Roles
+            Web Development &amp; IT Education Professional
           </div>
         </div>
       </div>

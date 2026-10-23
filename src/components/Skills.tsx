@@ -56,7 +56,7 @@ export default function Skills() {
             </h2>
           </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-md font-normal">
-            Modular competencies spanning modern frontend architectures, CMS/data synchronization, EdTech leadership, and professional languages.
+            Core competencies spanning frontend development, backend &amp; CMS platforms, AI developer tools (Codex &amp; Anti-gravity), and informatics education.
           </p>
         </div>
 

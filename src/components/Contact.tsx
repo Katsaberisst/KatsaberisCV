@@ -84,7 +84,7 @@ export default function Contact() {
             </h2>
           </div>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-md font-normal">
-            Open to full-time remote engineering roles, AI/Data integration projects, and specialized IT training opportunities.
+            Open to web development roles, educational technology consulting, and IT training opportunities.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export default function Contact() {
                 Let&apos;s start a conversation
               </h3>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
-                Whether you have an engineering opening, need consulting on educational technology, or want to discuss full-stack &amp; AI integration, feel free to reach out.
+                Whether you have a web development project, need training in informatics and programming, or want to discuss modern digital workflows, feel free to reach out.
               </p>
             </div>
 

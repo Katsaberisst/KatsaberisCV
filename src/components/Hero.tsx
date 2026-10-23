@@ -8,7 +8,7 @@ import {
   Copy,
   Check,
   Terminal,
-  Cpu,
+  Sparkles,
   GraduationCap,
   Globe2,
 } from "lucide-react";
@@ -38,7 +38,7 @@ export default function Hero() {
           </span>
           <span>{PERSONAL_INFO.availability}</span>
           <span className="text-neutral-300 dark:text-neutral-700 hidden xs:inline">•</span>
-          <span className="text-neutral-500 dark:text-neutral-400 font-mono text-[11px] hidden xs:inline">100% Remote Global</span>
+          <span className="text-neutral-500 dark:text-neutral-400 font-mono text-[11px] hidden xs:inline">{PERSONAL_INFO.location}</span>
         </div>
 
         {/* Main Title & Headline */}
@@ -64,16 +64,16 @@ export default function Hero() {
         {/* Key Focus Tags */}
         <div className="flex flex-wrap gap-2.5 mt-8 max-w-2xl">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-neutral-100 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300 border border-neutral-200/80 dark:border-neutral-700/60">
-            <Terminal className="w-3.5 h-3.5 text-blue-500" /> Full-Stack &amp; Next.js
+            <Terminal className="w-3.5 h-3.5 text-blue-500" /> Web Development (React / Next.js)
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-neutral-100 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300 border border-neutral-200/80 dark:border-neutral-700/60">
-            <Cpu className="w-3.5 h-3.5 text-purple-500" /> AI &amp; Data Integration
+            <Sparkles className="w-3.5 h-3.5 text-purple-500" /> AI Tools (Codex &amp; Anti-gravity)
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-neutral-100 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300 border border-neutral-200/80 dark:border-neutral-700/60">
-            <GraduationCap className="w-3.5 h-3.5 text-amber-500" /> EdTech &amp; IT Instruction
+            <GraduationCap className="w-3.5 h-3.5 text-amber-500" /> Informatics &amp; IT Education
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-neutral-100 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300 border border-neutral-200/80 dark:border-neutral-700/60">
-            <Globe2 className="w-3.5 h-3.5 text-emerald-500" /> 100% Remote Workflow
+            <Globe2 className="w-3.5 h-3.5 text-emerald-500" /> E-Commerce &amp; ERP Systems
           </span>
         </div>
 

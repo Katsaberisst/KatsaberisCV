@@ -14,18 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Stelios Katsaberis | Remote Software Engineer & EdTech Specialist",
+  title: "Stelios Katsaberis | Web Developer & IT Education Professional",
   description:
-    "Personal portfolio and interactive CV of Stelios Katsaberis. Computer Science (B.Sc.) and International Business (M.Sc.) graduate, currently pursuing postgraduate studies in Advanced Digital Technologies (focusing on AI and Data). Experienced in full-stack web development (React, Next.js, PHP, MySQL), e-commerce administration, and computer science education.",
+    "Personal portfolio and interactive CV of Stelios Katsaberis. Computer Science graduate (B.Sc. in Digital Systems, University of Piraeus) and International Business (M.Sc., DUTH). Experienced in web development (React, Next.js, PHP, MySQL), AI-assisted tools (Codex, Anti-gravity), e-commerce administration, and informatics education.",
   keywords: [
     "Stelios Katsaberis",
-    "Remote Software Engineer",
-    "Next.js Developer",
+    "Web Developer",
+    "IT Education Professional",
+    "Informatics Teacher",
     "React Developer",
-    "EdTech Specialist",
-    "IT Training Specialist",
-    "AI and Data",
-    "Full-Stack Web Development",
+    "Next.js Developer",
+    "Codex",
+    "Anti-gravity",
+    "PHP MySQL",
+    "E-Commerce Administration",
     "Computer Science Education",
   ],
   authors: [{ name: "Stelios Katsaberis" }],
@@ -33,17 +35,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://stelios-katsaberis.dev",
-    title: "Stelios Katsaberis | Remote Software Engineer & EdTech Specialist",
+    url: "https://katsaberis-cv.vercel.app",
+    title: "Stelios Katsaberis | Web Developer & IT Education Professional",
     description:
-      "Interactive CV and Portfolio — Next.js, React, Tailwind CSS, AI/Data, and EdTech Leadership.",
+      "Interactive CV and Portfolio — Web Development, React, Next.js, AI Tools (Codex, Anti-gravity), and IT Education.",
     siteName: "Stelios Katsaberis Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stelios Katsaberis | Remote Software Engineer & EdTech Specialist",
+    title: "Stelios Katsaberis | Web Developer & IT Education Professional",
     description:
-      "Interactive CV and Portfolio — Next.js, React, Tailwind CSS, AI/Data, and EdTech Leadership.",
+      "Interactive CV and Portfolio — Web Development, React, Next.js, AI Tools (Codex, Anti-gravity), and IT Education.",
   },
 };
 
